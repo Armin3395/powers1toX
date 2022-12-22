@@ -20,7 +20,6 @@ namespace factorial
                 for (int i = 1; i <= powern; i++)
                 {
                     ulong x = Convert.ToUInt64(MathF.Pow(basen, i));
-                    //double a = (MathF.Pow(3, i));
                     Console.WriteLine(basen + " to the power of " + i + "is : " + x);
                 }
 
