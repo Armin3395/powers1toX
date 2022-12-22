@@ -7,7 +7,7 @@ namespace factorial
         static void Main(string[] args)
         {
             Console.WriteLine("This program calculates powers of a number from 1 to the number you enter \n " +
-               "note that the maximum number can be 2^63");
+               "note that the maximum number can be 2^95");
             program();
             void program()
             {
