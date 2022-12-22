@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace factorial
 {
@@ -13,17 +13,30 @@ namespace factorial
             {
                 
                 Console.WriteLine("enter a number you want its power");
-                int basen = Convert.ToInt32(Console.ReadLine());
+                double basen = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("now enter the highest power");
                 int powern = Convert.ToInt32(Console.ReadLine());
 
-                for (int i = 1; i <= powern; i++)
+                if (powern > 0)
                 {
-                    ulong x = Convert.ToUInt64(MathF.Pow(basen, i));
-                    Console.WriteLine(basen + " to the power of " + i + "is : " + x);
+                    for (int i = 1; i <= powern; i++)
+                    {
+                        decimal x = Convert.ToDecimal(Math.Pow(basen, i));
+                        //double a = (MathF.Pow(3, i));
+                        Console.WriteLine(basen + " to the power of " + i + " is : " + x);
+                    }
+                }
+                if (powern <= 0)
+                {
+                    for (int i = 1; i >= powern; i--)
+                    {
+                        decimal x = Convert.ToDecimal(Math.Pow(basen, i));
+                        Console.WriteLine(basen + " to the power of " + i + " is : " + x);
+                    }
                 }
 
-                Console.WriteLine("enter 1 to continue or anything else to exit");
+
+                Console.WriteLine("enter 1 to continue or any other number to exit");
                 int cont = Convert.ToInt32(Console.ReadLine());
                 if (cont == 1)
                 {
